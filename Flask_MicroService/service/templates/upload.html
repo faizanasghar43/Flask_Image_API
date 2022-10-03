@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="utf-8">
+    <title>QR Code Reader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+<div class=" container ">
+    <div class=" row ">
+        <div class=" col ">
+            <hr>
+            <h1> Upload image </h1>
+            <hr>
+            <form action="/" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" name="image" id="image">
+                        <label class="custom-file-label" for="image"></label>
+                    </div>
+                    <button type="submit" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg
+              -indigo-600 rounded text-lg"><div class="content">
+                <i class="fas fa-cloud-upload"></i>
+                <p>Upload QR Code to Read</p>
+              </div></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

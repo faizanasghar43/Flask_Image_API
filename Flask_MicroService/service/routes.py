@@ -1,15 +1,10 @@
-from service import app, barcode_reader
-from flask import request, render_template
+from service import app, new_reader
+from flask import request
 
 
-@app.route('/', methods=['GET', 'POST'])
-def upload_image():
+@app.route('/api/getphoto', methods=['POST'])
+def api_call():
     try:
-        if request.method == 'POST':
-            if request.files:
-                image = request.files['image']
-                response = barcode_reader(image.filename)
-                return render_template("response.html", response=response)
-        return render_template("upload.html")
+        return new_reader(request.data)   #gets the encoded image and passes it to decoding + scanning function
     except:
         raise Exception(" Please add a valid QRcode/Barcode ")

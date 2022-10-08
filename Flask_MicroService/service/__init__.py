@@ -17,5 +17,4 @@ def new_reader(encoded_img):
     return {"Type": type_, "Data": data}
 
 
-
 from .routes import app
